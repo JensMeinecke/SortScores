@@ -34,6 +34,7 @@ namespace SortScores
             Assert.AreEqual(testResult.FirstName, "TERESSA");
             Assert.AreEqual(testResult.LastName, "BUNDY");
             Assert.AreEqual(testResult.Score, 88);
+
         }
     }
 }
