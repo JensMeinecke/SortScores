@@ -41,20 +41,5 @@ namespace SortScores
 
             return new TestResult(data[Column.LastName].Trim(), data[Column.FirstName].Trim(), score);
         }
-
-        public static int Compare(TestResult t1, TestResult t2)
-        {
-            int diff = t2.Score - t1.Score;
-
-            if (diff != 0)
-                return diff;
-
-            diff = string.Compare(t1.LastName, t2.LastName);
-
-            if (diff != 0)
-                return diff;
-
-            return string.Compare(t1.LastName, t2.LastName);
-        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace SortScores
 {
@@ -72,9 +73,10 @@ namespace SortScores
             {
                 using (TextWriter tw = new StreamWriter(outputName))
                 {
-                    results.Sort(TestResult.Compare);
-
-                    foreach (var result in results)
+                    foreach (var result in results
+                        .OrderByDescending(tr=>tr.Score)
+                        .ThenBy(tr=>tr.LastName)
+                        .ThenBy(tr=>tr.FirstName))
                     {
                         string line = $"{result.LastName}, {result.FirstName}, {result.Score}";
                         Console.WriteLine(line);
@@ -92,7 +94,6 @@ namespace SortScores
             {
                 Console.WriteLine($"Unable to write to output file '{fileName}' : {ex.Message}");
             }
-
         }
     }
 }
