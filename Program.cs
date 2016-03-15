@@ -67,7 +67,7 @@ namespace SortScores
                 results.Add(result);
             }
 
-            var outputName = Path.GetFileNameWithoutExtension(fileName) + "-sorted.txt";
+            var outputName = Path.GetFileNameWithoutExtension(fileName) + "-graded.txt";
 
             try
             {
