@@ -44,7 +44,7 @@ namespace SortScores
 
             }
 
-            List<TestResult> results = new List<TestResult>();
+            var results = new List<TestResult>();
 
             int errors = 0;
 
