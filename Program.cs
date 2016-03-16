@@ -31,11 +31,11 @@ namespace SortScores
                 return;
             }
 
-            string[] lines;
+            IEnumerable<string> lines;
 
             try
             {
-                lines = File.ReadAllLines(fileName);
+                lines = File.ReadLines(fileName);
             }
             catch (Exception ex)
             {
